@@ -3,7 +3,7 @@ name: Build and Deploy to Cloud Run
 on:
     push:
         branches:
-            - master
+            - main
             
 env:
     SERVICE_NAME: ${{ github.event.repository.name }}
@@ -32,11 +32,11 @@ jobs:
               run: |
                   #export SERVICE_NAME=${{ github.event.repository.name }}
                   #echo $SERVICE_NAME
-                  gcloud config set project us-gcp-ame-con-116-npd-1
+                  gcloud config set project singular-autumn-341010
       
             - name: Image
               run: |-
-                docker build -t asia.gcr.io/us-gcp-ame-con-116-npd-1/$SERVICE_NAME:$GITHUB_SHA .
+                docker build -t asia.gcr.io/singular-autumn-341010/$SERVICE_NAME:$GITHUB_SHA .
                 
             #Configure docker to use the gcloud command-line tool as a credential helper
             - run: |
@@ -44,7 +44,7 @@ jobs:
               # Push image to Google Container Registry
             - name: Build
               run: |-
-                  docker push asia.gcr.io/us-gcp-ame-con-116-npd-1/$SERVICE_NAME:$GITHUB_SHA
+                  docker push asia.gcr.io/singular-autumn-341010/$SERVICE_NAME:$GITHUB_SHA
             - name: Deploy
               run: |
-                  gcloud run deploy $SERVICE_NAME --region us-west2 --image asia.gcr.io/us-gcp-ame-con-116-npd-1/$SERVICE_NAME:$GITHUB_SHA --max-instances 3 --memory 1000Mi --platform managed --region us-west2 --allow-unauthenticated 
+                  gcloud run deploy $SERVICE_NAME --region us-west2 --image asia.gcr.io/singular-autumn-341010/$SERVICE_NAME:$GITHUB_SHA --max-instances 3 --memory 1000Mi --platform managed --region us-west2 --allow-unauthenticated 
