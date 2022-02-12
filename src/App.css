@@ -1,0 +1,166 @@
+.App {
+  background-color: black;;
+}
+
+
+.header{
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  font: Roboto;
+  size: 20px;
+  font-weight: normal;
+}
+
+.logo{
+  margin: 128px;
+  margin-right:auto
+}
+
+.mp {
+  margin: 128px;
+  margin-left: auto;
+}
+
+.nc {
+  margin-right: 45px;
+}
+.uc {
+  margin-left: 45px;
+}
+
+.footer {
+  display: flex;
+  background-color: black;
+  height: 560px;
+  color: white;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font: Roboto;
+  font-size: 14px;
+}
+
+.footer > p {
+  margin-top: 168px;
+}
+
+.flogo {
+  width: 30px;
+  height: 30px;
+}
+
+.landing{
+  height: 720px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  margin-left: 50px;
+  margin-right: 50px;
+
+}
+
+.selection {
+  background-color: rgb(29, 28, 28);
+  height: 113px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.selection > p {
+  color: #FFFFFFCC;
+  font-size: 18px;
+  display: flex;
+  margin: -160px;
+
+}
+
+.search-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.dream-car {
+  height: 63.33px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  color: white;
+  text-shadow: 0px 4px 12px rgba(255,255,255,0.6);
+}
+
+.search-bar {
+  height: 50px;
+  width: 882px;
+  font-size: 16px;
+}
+
+.search-button {
+  background: #790E22;
+  color: white;
+  font-size: 24px;
+  height: 48px;
+  margin-left: -120px;
+  
+}
+
+.p-jl-u{
+  display: flex;
+  
+}
+.p-jl-u > p {
+  background-color: rgb(247, 246, 246);
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.featured-section {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-left: 50px;
+}
+
+
+.featured-cars {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: space-evenly
+
+
+}
+.car-tile {
+  color: black;
+}
+
+.car-image {
+  width: 278px;
+  height: 417px;
+}
+.car-name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.car-price {
+  color: gray;
+  font-size: small;
+}
+
+.view-all-cars {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.car-info {
+  font-size: 50px;
+  justify-content: center;
+  color: white;
+}
